@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Team Chakrax</h1>
+        <p>Showcasing our creative talents</p>
+        <img src="img/logo.png" alt="Team Chakrax Logo" class="logo">
+                <div class="header-text">
+                    <h1>Team Chakrax</h1>
+                    <p>Showcasing our creative talents</p>
+                </div>
+        <nav>
+            <button id="loginBtn">Staff Login</button>
+            <button id="uploadBtn">Upload</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="editing">
+            <h2>Editing Department</h2>
+            <p>Our editing style focuses on seamless transitions and vibrant color grading.</p>
+            <div class="gallery">
+                <div class="item">
+                    <img src="before.jpg" alt="Before Editing">
+                    <img src="after.jpg" alt="After Editing">
+                </div>
+                <!--<div class="item">
+                    <video controls>
+                         <source src="editing-sample.mp4" type="video/mp4"> 
+                         Your browser does not support the video tag. 
+                        
+                    </video>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="thumbnail-artist">
+            <h2>Thumbnail Artist Department</h2>
+            <p>Creating eye-catching thumbnails that drive engagement.</p>
+            <div class="thumbnail-gallery">
+                <img src="img/thumbnail1.png" alt="Thumbnail 1">
+                <img src="img/thumbnail2.png" alt="Thumbnail 2">
+                <img src="img/thumbnail3.png" alt="Thumbnail 3">
+                <img src="img/thumbnail4.png" alt="Thumbnail 4">
+                <img src="img/thumbnail5.png" alt="Thumbnail 5">
+                <img src="img/thumbnail6.png" alt="Thumbnail 6">
+                <img src="img/thumbnail7.png" alt="Thumbnail 7">
+                <img src="img/thumbnail8.png" alt="Thumbnail 8">
+                <img src="img/thumbnail9.png" alt="Thumbnail 9">
+                <img src="img/thumbnail10.png" alt="Thumbnail 10">
+            </div>
+        </section>
+
+        <section id="model-artist">
+            <h2>Model Artist Department</h2>
+            <p>Bringing concepts to life through stunning visuals.</p>
+            <div class="model-gallery">
+                <img src="model1.jpg" alt="Model 1">
+                <img src="model2.jpg" alt="Model 2">
+                <img src="model3.jpg" alt="Model 3">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email: theteamchakrabusiness@Gmail.com</p>
+        <p>Follow us on social media!</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p class="notification" id="loginNotification"></p>
+    </div>
+</div>
+
+    <!-- Upload Modal -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="uploadModal">&times;</span>
+            <h2>Upload Section</h2>
+            <form id="uploadForm">
+                <label for="category">Select Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="editing">Editing</option>
+                    <option value="thumbnail">Thumbnail</option>
+                    <option value="model">Model</option>
+                </select>
+                <label for="fileUpload">Upload Video/Image:</label>
+                <input type="file" id="fileUpload" name="fileUpload" accept="video/*,image/*" required>
+                <label for="uploadText">Write accompanying text:</label>
+                <textarea id="uploadText" name="uploadText" rows="4" required></textarea>
+                <button type="submit">Upload</button>
+            </form>
+            <p id="uploadMessage" class="notification success"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
